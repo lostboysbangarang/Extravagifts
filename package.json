@@ -1,0 +1,19 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "Ecommerce website for Michelle",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lostboysbangarang/Extravagifts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lostboysbangarang/Extravagifts/issues"
+  },
+  "homepage": "https://github.com/lostboysbangarang/Extravagifts#readme"
+}
