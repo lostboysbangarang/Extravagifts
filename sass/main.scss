@@ -1,4 +1,19 @@
 $primary: #CACFC3;
+$windmill: #AAB7BC;
+$windmillAlt: #AAB7BC;
+$creme: #E6DACC;
+$emmiesRoom: #CBCFC4;
+
+
+@mixin centering {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+
+
 
 html,body {
     width: 100%;
@@ -13,7 +28,71 @@ html,body {
     border-style: solid;
     border-color: $primary;
     border-width: 1px;
-    height: 75px;
+    //height: 60px;
     color: #000;
     width: 100vw;
+    & ul{
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        @include centering();
+    }
+    &_icky {
+        &_home {
+            background-color: $primary;
+            width: 25.78125vw;
+            height: 60px;
+        }
+        &_shop {
+            background-color: $windmill;
+            width: 18.75vw;
+            height: 60px;
+        }
+        &_search {
+            @include centering();
+            // background-color: $creme;
+            width: 27.1875vw;
+            height: 60px;
+            & .bar {
+                width: 21.40625vw;
+                height: 56%;
+                padding: 0px;
+                border-radius: 25px;
+                border-style: solid;
+                border-width: 3px;
+                border-color: $emmiesRoom;
+                // background-color: $emmiesRoom;
+                &_search {
+                    border-radius: 0px 25px 25px 0px;
+                    padding: 0px;
+                    width: 88.379%;
+                    height: 100%;
+                    float: right;
+                    border-style: none;
+                    border-width: 1px;
+                    
+                }
+                &_btn {
+                    border-radius: 25px 0px 0px 25px;
+                    border-style: none;
+                    border-width: 1px;
+                    border-color: $emmiesRoom;
+                    width: 10.95%;
+                    height: 100%;
+                    
+                    background: none;
+                    // background-color: $emmiesRoom;
+                    &_icon {
+                        // color: $windmill;
+                        font-size: 1.5em;
+                    }
+                }
+            }
+            .cart {
+                font-size: 1.5em;
+                margin-left: 5px;
+            }
+        }
+        
+    }
 }
