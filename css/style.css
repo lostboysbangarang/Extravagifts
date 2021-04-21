@@ -47,6 +47,10 @@ html a, body a {
   padding: 0px;
   margin: 0px;
 }
+.sticky_icky_home .dropItLow {
+  font-size: 12px;
+  display: inline-block;
+}
 .sticky_icky_shop {
   display: flex;
   justify-content: center;
