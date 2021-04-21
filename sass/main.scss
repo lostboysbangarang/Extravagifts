@@ -3,6 +3,7 @@ $windmill: #AAB7BC;
 $windmillAlt: #AAB7BC;
 $creme: #E6DACC;
 $emmiesRoom: #CBCFC4;
+$text: #463B57;
 
 
 @mixin centering {
@@ -21,16 +22,22 @@ html,body {
     overflow-x: hidden;
     margin: 0px;
     padding: 0px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Laila', sans-serif;
+    & a{
+        text-decoration: none;
+    }
+    
+
 }
 
 .sticky {
-    border-style: solid;
+    border-style: none none solid none;
     border-color: $primary;
-    border-width: 1px;
-    //height: 60px;
+    border-width: 3px;
+    height: 60px;
     color: #000;
     width: 100vw;
+    // @include centering();
     & ul{
         list-style: none;
         margin: 0px;
@@ -38,15 +45,37 @@ html,body {
         @include centering();
     }
     &_icky {
+        
         &_home {
-            background-color: $primary;
+            // background-color: $primary;
+            @include centering();
+            font-size: 35px;
+            color: $text;
             width: 25.78125vw;
+            border-style: none solid none none;
+            border-width: 3px;
+            border-color: $emmiesRoom;
             height: 60px;
+            &_logo {
+                height: 60px;
+                margin-right: 25px;
+                & img {
+                    height: 60px;
+                    padding: 0px;
+                    margin: 0px;
+                }
+            }
         }
         &_shop {
-            background-color: $windmill;
+            // background-color: $windmill;
+            @include centering();
+            color: $text;
+            font-size: 35px;
             width: 18.75vw;
             height: 60px;
+            border-style: none solid none none;
+            border-width: 3px;
+            border-color: $emmiesRoom;
         }
         &_search {
             @include centering();

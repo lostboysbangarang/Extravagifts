@@ -4,13 +4,17 @@ html, body {
   overflow-x: hidden;
   margin: 0px;
   padding: 0px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Laila", sans-serif;
+}
+html a, body a {
+  text-decoration: none;
 }
 
 .sticky {
-  border-style: solid;
+  border-style: none none solid none;
   border-color: #CACFC3;
-  border-width: 1px;
+  border-width: 3px;
+  height: 60px;
   color: #000;
   width: 100vw;
 }
@@ -23,14 +27,37 @@ html, body {
   align-items: center;
 }
 .sticky_icky_home {
-  background-color: #CACFC3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  color: #463B57;
   width: 25.78125vw;
+  border-style: none solid none none;
+  border-width: 3px;
+  border-color: #CBCFC4;
   height: 60px;
 }
+.sticky_icky_home_logo {
+  height: 60px;
+  margin-right: 25px;
+}
+.sticky_icky_home_logo img {
+  height: 60px;
+  padding: 0px;
+  margin: 0px;
+}
 .sticky_icky_shop {
-  background-color: #AAB7BC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #463B57;
+  font-size: 35px;
   width: 18.75vw;
   height: 60px;
+  border-style: none solid none none;
+  border-width: 3px;
+  border-color: #CBCFC4;
 }
 .sticky_icky_search {
   display: flex;
