@@ -51,16 +51,16 @@ function slideToTheLeft(){
     II=i+1
     III=i+2
     if (typeof images[III] != "undefined") {
-        document.getElementsByClassName("photo")[2].style.backgroundImage="url('"+images[III]+"')";
+        document.getElementsByClassName("photo")[2].style.backgroundImage="url('../"+images[III]+"')";
     } else {
-        document.getElementsByClassName("photo")[2].style.backgroundImage="url('"+images[1]+"')";
+        document.getElementsByClassName("photo")[2].style.backgroundImage="url('../"+images[1]+"')";
     }
     if (typeof images[II] != "undefined") {
-        document.getElementsByClassName("photo")[1].style.backgroundImage="url('"+images[II]+"')";
+        document.getElementsByClassName("photo")[1].style.backgroundImage="url('../"+images[II]+"')";
     } else {
-        document.getElementsByClassName("photo")[1].style.backgroundImage="url('"+images[0]+"')";
+        document.getElementsByClassName("photo")[1].style.backgroundImage="url('../"+images[0]+"')";
     }
-    document.getElementsByClassName("photo")[0].style.backgroundImage="url('"+images[I]+"')";
+    document.getElementsByClassName("photo")[0].style.backgroundImage="url('../"+images[I]+"')";
 
     if (i <images.length-1) {
         i++;
