@@ -52,27 +52,57 @@ html a, body a {
   margin: 0px;
 }
 .sticky_icky_home .dropItLow.menu_1 {
+  z-index: 100;
   font-size: 12px;
   position: absolute;
   display: inline-block;
-  background-color: #AAB7BC;
-  top: 63px;
+  background-color: #E6DACC;
+  border-style: solid none none none;
+  border-width: 3px;
+  border-color: #CBCFC4;
+  top: 60px;
   width: 90vw;
-  height: 60vh;
+  height: 60%;
   left: 5vw;
 }
 .sticky_icky_home .dropItLow.menu_1 .section1 {
   position: absolute;
-  background-color: #E6DACC;
   right: 50%;
   width: 45%;
-  top: 10%;
+  height: 140px;
+  top: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-style: none solid none none;
+  border-color: #463B57;
+}
+.sticky_icky_home .dropItLow.menu_1 .section1 div {
+  color: #463B57;
+}
+.sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
+  font-size: 3em;
+}
+.sticky_icky_home .dropItLow.menu_1 .section1_email {
+  font-size: 2em;
 }
 .sticky_icky_home .dropItLow.menu_1 .section2 {
   position: absolute;
-  background-color: #E6DACC;
   width: 45%;
   left: 50%;
+  height: 140px;
+  top: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sticky_icky_home .dropItLow.menu_1 .section2_hours {
+  font-size: 1.75em;
+}
+.sticky_icky_home .dropItLow.menu_1 .section2_address {
+  margin-left: 15px;
 }
 .sticky_icky_home .dropItLow.menu_1 .section3 {
   position: absolute;
@@ -133,6 +163,41 @@ html a, body a {
 .sticky_icky_search .cart {
   font-size: 1.5em;
   margin-left: 5px;
+}
+
+ul.dropItLow {
+  visibility: hidden;
+}
+ul.dropItLow li {
+  display: none;
+}
+
+li:hover > ul.dropItLow {
+  visibility: visible;
+}
+li:hover > ul.dropItLow li {
+  display: block;
+}
+
+li:hover > ul.dropItLow.menu_1 {
+  display: block;
+  visibility: visible;
+  opacity: 0;
+  animation: menu1 300ms ease-in-out forwards;
+  z-index: 100;
+}
+li:hover > ul.dropItLow.menu_1 li {
+  opacity: 0;
+  animation: menu1 900ms ease-in-out forwards;
+}
+
+@keyframes menu1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

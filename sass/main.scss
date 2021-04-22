@@ -70,27 +70,54 @@ html,body {
                 }
             }
             & .dropItLow.menu_1{
-                
+                z-index: 100;
                 font-size: 12px;
                 position: absolute;
                 display: inline-block;
-                background-color: #AAB7BC;
-                top: 63px;
+                background-color: $creme;
+                border-style: solid none none none;
+                border-width: 3px;
+                border-color: $emmiesRoom;
+                top: 60px;
                 width: 90vw;
-                height: 60vh;
+                height: 60%;
                 left: 5vw;
                 & .section1 {
                     position: absolute;
-                    background-color: $creme;
+                    
                     right: 50%;
                     width: 45%;
-                    top: 10%;
+                    height: 140px;
+                    top: 8%;
+                    @include centering();
+                    flex-direction: column;
+                    border-style: none solid none none;
+                    border-color: $text;
+                    & div {
+                        color: $text;
+                    }
+                    &_phoneNum {
+                        font-size: 3em;
+                    }
+                    &_email {
+                        font-size: 2em;
+                    }
                 }
                 & .section2 {
                     position: absolute;
-                    background-color: $creme;
+                    
                     width: 45%;
                     left: 50%;
+                    height: 140px;
+                    top: 8%;
+                    @include centering();
+                    flex-direction: column;
+                    &_hours {
+                        font-size: 1.75em;
+                    }
+                    &_address {
+                        margin-left: 15px;
+                    }
                 }
                 & .section3 {
                     position: absolute;
@@ -161,39 +188,39 @@ html,body {
         
     }
 }
-// ul.dropItLow {
-//     // display: none;
-//     visibility: hidden;
-//     li {
-//         display: none;
-//     }
-// }
-// li:hover > ul.dropItLow {
-//     // display: block;
-//     visibility: visible;
-//     li {
-//         display: block;
-//     }
+ul.dropItLow {
+    // display: none;
+    visibility: hidden;
+    li {
+        display: none;
+    }
+}
+li:hover > ul.dropItLow {
+    // display: block;
+    visibility: visible;
+    li {
+        display: block;
+    }
 
-// }
+}
 
-// li:hover > ul.dropItLow.menu_1 {
-//     display: block;
-//     visibility: visible;
-//     opacity: 0;
-//     animation: menu1 300ms ease-in-out forwards;
-//     z-index: 10;
-//     li {
-//         opacity: 0;
-//         animation: menu1 900ms ease-in-out forwards;
-//     }
+li:hover > ul.dropItLow.menu_1 {
+    display: block;
+    visibility: visible;
+    opacity: 0;
+    animation: menu1 300ms ease-in-out forwards;
+    z-index: 100;
+    li {
+        opacity: 0;
+        animation: menu1 900ms ease-in-out forwards;
+    }
 
-// }
-// @keyframes menu1 {
-//     0% {
-//         opacity: 0;
-//     }
-//     100% {
-//         opacity: 1;
-//     }
-// }
+}
+@keyframes menu1 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
