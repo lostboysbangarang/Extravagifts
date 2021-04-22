@@ -6,6 +6,9 @@ html, body {
   padding: 0px;
   font-family: "Laila", sans-serif;
 }
+html input:focus, html textarea:focus, html select:focus, body input:focus, body textarea:focus, body select:focus {
+  outline: none;
+}
 html a, body a {
   text-decoration: none;
 }
@@ -17,6 +20,7 @@ html a, body a {
   height: 60px;
   color: #000;
   width: 100vw;
+  margin-bottom: 15px;
 }
 .sticky ul {
   list-style: none;
@@ -47,9 +51,35 @@ html a, body a {
   padding: 0px;
   margin: 0px;
 }
-.sticky_icky_home .dropItLow {
+.sticky_icky_home .dropItLow.menu_1 {
   font-size: 12px;
+  position: absolute;
   display: inline-block;
+  background-color: #AAB7BC;
+  top: 63px;
+  width: 90vw;
+  height: 60vh;
+  left: 5vw;
+}
+.sticky_icky_home .dropItLow.menu_1 .section1 {
+  position: absolute;
+  background-color: #E6DACC;
+  right: 50%;
+  width: 45%;
+  top: 10%;
+}
+.sticky_icky_home .dropItLow.menu_1 .section2 {
+  position: absolute;
+  background-color: #E6DACC;
+  width: 45%;
+  left: 50%;
+}
+.sticky_icky_home .dropItLow.menu_1 .section3 {
+  position: absolute;
+  width: 95%;
+  height: 500px;
+  margin-left: 2.5%;
+  top: 200px;
 }
 .sticky_icky_shop {
   display: flex;

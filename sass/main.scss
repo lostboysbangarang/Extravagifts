@@ -23,6 +23,9 @@ html,body {
     margin: 0px;
     padding: 0px;
     font-family: 'Laila', sans-serif;
+    input:focus, textarea:focus, select:focus {
+        outline: none;
+    }
     & a{
         text-decoration: none;
     }
@@ -37,6 +40,7 @@ html,body {
     height: 60px;
     color: #000;
     width: 100vw;
+    margin-bottom: 15px;
     // @include centering();
     & ul{
         list-style: none;
@@ -65,9 +69,37 @@ html,body {
                     margin: 0px;
                 }
             }
-            & .dropItLow {
+            & .dropItLow.menu_1{
+                
                 font-size: 12px;
+                position: absolute;
                 display: inline-block;
+                background-color: #AAB7BC;
+                top: 63px;
+                width: 90vw;
+                height: 60vh;
+                left: 5vw;
+                & .section1 {
+                    position: absolute;
+                    background-color: $creme;
+                    right: 50%;
+                    width: 45%;
+                    top: 10%;
+                }
+                & .section2 {
+                    position: absolute;
+                    background-color: $creme;
+                    width: 45%;
+                    left: 50%;
+                }
+                & .section3 {
+                    position: absolute;
+                    width: 95%;
+                    height: 500px;
+                    margin-left: 2.5%;
+                    top: 200px;
+                }
+                
             }
         }
         &_shop {
@@ -129,3 +161,39 @@ html,body {
         
     }
 }
+// ul.dropItLow {
+//     // display: none;
+//     visibility: hidden;
+//     li {
+//         display: none;
+//     }
+// }
+// li:hover > ul.dropItLow {
+//     // display: block;
+//     visibility: visible;
+//     li {
+//         display: block;
+//     }
+
+// }
+
+// li:hover > ul.dropItLow.menu_1 {
+//     display: block;
+//     visibility: visible;
+//     opacity: 0;
+//     animation: menu1 300ms ease-in-out forwards;
+//     z-index: 10;
+//     li {
+//         opacity: 0;
+//         animation: menu1 900ms ease-in-out forwards;
+//     }
+
+// }
+// @keyframes menu1 {
+//     0% {
+//         opacity: 0;
+//     }
+//     100% {
+//         opacity: 1;
+//     }
+// }
