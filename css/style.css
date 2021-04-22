@@ -167,8 +167,8 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
 .intro {
   background-image: url(../resources/candyBck.png);
   background-size: contain;
-  height: 66vh;
-  width: 1200px;
+  height: 34.965vw;
+  width: 63vw;
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -181,7 +181,7 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
 }
 .intro_box {
   height: 270px;
-  width: 560px;
+  width: 32.2916666667vw;
   margin-left: -2px;
   margin-top: 55px;
   line-height: 0.75em;
@@ -189,19 +189,31 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   justify-content: space-evenly;
   align-items: center;
 }
+.intro_box_text {
+  font-size: 1vw;
+}
+.intro_box_text h1 {
+  font-size: 3vw;
+  margin-left: -0.25vw;
+}
 
 .background {
   background-color: #CBCFC4;
   opacity: 0.5;
   width: 100vw;
-  height: 50vh;
-  margin-top: -30vh;
+  height: 25.990615vw;
+  margin-top: -15.311458vw;
 }
 
 .container {
   width: 100vw;
   height: 40vw;
   display: flex;
+}
+.container h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container_photoOut {
   width: 49.21875vw;
@@ -255,6 +267,10 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
 .container_text_2, .container_text_3_2 {
   margin-left: 10vw;
   width: 35vw;
+}
+
+#breakThat {
+  background-image: url(../resources/emmiesBck.png);
 }
 
 ul.dropItLow {

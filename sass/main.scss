@@ -190,8 +190,8 @@ html,body {
     // background-color: $windmill;
     background-image: url(../resources/candyBck.png);
     background-size: contain;
-    height: 66vh;
-    width: 1200px;
+    height: .555*63vw;
+    width: 63vw;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -201,7 +201,7 @@ html,body {
     @include centering();
     &_box {
         height: 270px;
-        width: 560px;
+        width: (620px/1920px)*100vw;
         margin-left: -2px;
         margin-top: 55px;
         line-height: .75em;
@@ -210,20 +210,32 @@ html,body {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        &_text {
+            & h1 {
+                font-size: 3vw;
+                margin-left: -.25vw;
+            }
+            font-size: 1vw;
+        }
+
+        
     }
 }
 .background {
     background-color: $emmiesRoom;
     opacity: .5;
     width: 100vw;
-    height: 50vh;
-    margin-top: -30vh;
+    height: .25990615*100vw;
+    margin-top: -.15311458*100vw;
 }
 .container {
     // background-color: $creme;
     width: 100vw;
     height: .4*100vw;
     display: flex;
+    & h1 {
+        @include centering();
+    }
     &_photoOut {
         width: 49.21875vw;
         height: .644750*49.21875vw;
@@ -278,6 +290,10 @@ html,body {
             width: 35vw; 
         }
     }
+    
+}
+#breakThat {
+    background-image: url(../resources/emmiesBck.png);
 }
 
 
