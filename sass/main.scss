@@ -11,7 +11,34 @@ $text: #463B57;
     justify-content: center;
     align-items: center; 
 }
-
+@mixin shakeShakeIt {
+    background-color: white;
+    width: 26.9791666vw;
+    height: 1.432432*26.9791666vw;
+    margin-top: 7.171514543630vw;
+    box-shadow: 5px 5px 5px darken($emmiesRoom, 20%);
+    
+    & .photo {
+        //background-color: $creme;
+        width: 23.802083333vw;
+        height: 23.802083333vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1.5885416vw;
+        box-shadow: 5px 5px 5px black, -5px -5px 5px black, -5px 5px 5px black, 5px -5px 5px black;
+    }
+    & .text {
+        @include centering();
+        flex-direction: column;
+        width: .69*23.802083333vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1.7592881833vw;
+        & h2 {
+            margin-bottom: -10px;
+        }
+    }
+}
 
 
 
@@ -232,6 +259,7 @@ html,body {
     // background-color: $creme;
     width: 100vw;
     height: .4*100vw;
+    margin-bottom: 30px;
     display: flex;
     & h1 {
         @include centering();
@@ -290,10 +318,24 @@ html,body {
             width: 35vw; 
         }
     }
+    &_poloroid_1 {
+        @include shakeShakeIt();
+    }
+    &_poloroid_2 {
+        @include shakeShakeIt(); 
+    }
+    &_poloroid_3 {
+        @include shakeShakeIt(); 
+    }
     
 }
+
 #breakThat {
     background-image: url(../resources/emmiesBck.png);
+    height: 50vw;
+    margin: 0px;
+    @include centering();
+    justify-content: space-around;
 }
 
 
