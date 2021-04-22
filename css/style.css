@@ -206,7 +206,6 @@ html a, body a {
 }
 
 .container {
-  background-color: #E6DACC;
   width: 100vw;
   height: 60vh;
   display: flex;
@@ -221,7 +220,8 @@ html a, body a {
 .container_photoIn {
   width: 49.21875vw;
   height: 31.7337890625vw;
-  background-color: white;
+  background-image: url(../resources/collection.png);
+  background-size: cover;
   margin-left: -44vw;
   margin-top: 30px;
 }

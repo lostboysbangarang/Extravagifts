@@ -229,7 +229,7 @@ html,body {
     margin-top: -30vh;
 }
 .container {
-    background-color: $creme;
+    // background-color: $creme;
     width: 100vw;
     height: 60vh;
     display: flex;
@@ -244,7 +244,8 @@ html,body {
     &_photoIn {
         width: 49.21875vw;
         height: .644750*49.21875vw;
-        background-color: white;
+        background-image: url(../resources/collection.png);
+        background-size: cover;
         // opacity: .2;
         // margin-top: 100px;
         // margin-left: 45vw;
