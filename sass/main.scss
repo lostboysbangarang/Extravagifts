@@ -18,6 +18,7 @@ $text: #463B57;
 
 html,body {
     width: 100%;
+    height: 100%;
     max-width: 100vw;
     overflow-x: hidden;
     margin: 0px;
@@ -41,6 +42,10 @@ html,body {
     color: #000;
     width: 100vw;
     margin-bottom: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
     // @include centering();
     & ul{
         list-style: none;
@@ -81,7 +86,7 @@ html,body {
                 border-color: $emmiesRoom;
                 top: 60px;
                 width: 90vw;
-                height: 60%;
+                height: 600px;
                 left: 5vw;
                 & .section1 {
                     position: absolute;
@@ -192,21 +197,36 @@ html,body {
 
 .intro {
     // background-color: $windmill;
-    background-image: url(/resources/candyLogo.png);
-    background-size: cover;
-    height: 67.1296vh;
-    width: 69.2708vw;
+    background-image: url(/resources/candyBck.png);
+    background-size: contain;
+    height: 66vh;
+    width: 1200px;
     position: relative;
-    left: 15%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 15vh;
     z-index: 15;
+    display: flex;
+    @include centering();
+    &_box {
+        height: 270px;
+        width: 560px;
+        margin-left: -2px;
+        margin-top: 55px;
+        line-height: .75em;
+        color: $text;
+        // background-color: $creme;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
 }
 .background {
     background-color: $emmiesRoom;
     opacity: .5;
     width: 100vw;
     height: 60vh;
-    margin-top: -25vh;
+    margin-top: -30vh;
 }
 
 ul.dropItLow {
