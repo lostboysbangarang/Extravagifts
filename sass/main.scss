@@ -19,7 +19,7 @@ $text: #463B57;
 html,body {
     width: 100%;
     height: 100%;
-    max-width: 100vw;
+    max-width: 150vw;
     overflow-x: hidden;
     margin: 0px;
     padding: 0px;
@@ -225,9 +225,55 @@ html,body {
     background-color: $emmiesRoom;
     opacity: .5;
     width: 100vw;
-    height: 60vh;
+    height: 50vh;
     margin-top: -30vh;
 }
+.container {
+    background-color: $creme;
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    &_photoOut {
+        width: 49.21875vw;
+        height: .644750*49.21875vw;
+        background-color: $emmiesRoom;
+        // opacity: .2;
+        margin-top: 100px;
+        margin-left: 42.5vw;
+    }
+    &_photoIn {
+        width: 49.21875vw;
+        height: .644750*49.21875vw;
+        background-color: white;
+        // opacity: .2;
+        // margin-top: 100px;
+        // margin-left: 45vw;
+        margin-left: -44vw;
+        margin-top: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ul.dropItLow {
     // display: none;
