@@ -277,6 +277,7 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   box-shadow: 5px 5px 5px #99a18c;
 }
 .container_poloroid_1 .photo {
+  background-size: cover;
   width: 23.802083333vw;
   height: 23.802083333vw;
   margin-left: auto;
@@ -289,12 +290,15 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 16.4234374998vw;
+  width: 19.0416666664vw;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1.7592881833vw;
+  font-size: 1.25vw;
 }
 .container_poloroid_1 .text h2 {
+  font-size: 2vw;
+  margin-top: -1vw;
   margin-bottom: -10px;
 }
 .container_poloroid_2 {
@@ -305,6 +309,7 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   box-shadow: 5px 5px 5px #99a18c;
 }
 .container_poloroid_2 .photo {
+  background-size: cover;
   width: 23.802083333vw;
   height: 23.802083333vw;
   margin-left: auto;
@@ -317,12 +322,15 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 16.4234374998vw;
+  width: 19.0416666664vw;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1.7592881833vw;
+  font-size: 1.25vw;
 }
 .container_poloroid_2 .text h2 {
+  font-size: 2vw;
+  margin-top: -1vw;
   margin-bottom: -10px;
 }
 .container_poloroid_3 {
@@ -333,6 +341,7 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   box-shadow: 5px 5px 5px #99a18c;
 }
 .container_poloroid_3 .photo {
+  background-size: cover;
   width: 23.802083333vw;
   height: 23.802083333vw;
   margin-left: auto;
@@ -345,12 +354,15 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 16.4234374998vw;
+  width: 19.0416666664vw;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1.7592881833vw;
+  font-size: 1.25vw;
 }
 .container_poloroid_3 .text h2 {
+  font-size: 2vw;
+  margin-top: -1vw;
   margin-bottom: -10px;
 }
 

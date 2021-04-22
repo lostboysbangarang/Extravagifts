@@ -20,6 +20,7 @@ $text: #463B57;
     
     & .photo {
         //background-color: $creme;
+        background-size: cover;
         width: 23.802083333vw;
         height: 23.802083333vw;
         margin-left: auto;
@@ -28,14 +29,26 @@ $text: #463B57;
         box-shadow: 5px 5px 5px black, -5px -5px 5px black, -5px 5px 5px black, 5px -5px 5px black;
     }
     & .text {
+        // @media (max-width:1410px){
+        //     & h2 {
+        //         font-size: 2vw;
+        //         margin-top: -1vw;
+        //     }
+        //     font-size:1.25vw;
+        //     width: .8*23.802083333vw;
+        // }
         @include centering();
         flex-direction: column;
-        width: .69*23.802083333vw;
+        width: .8*23.802083333vw;
         margin-left: auto;
         margin-right: auto;
         margin-top: 1.7592881833vw;
+        font-size:1.25vw;
         & h2 {
+            font-size: 2vw;
+            margin-top: -1vw;
             margin-bottom: -10px;
+
         }
     }
 }
@@ -311,6 +324,7 @@ html,body {
         
     }
     &_text, &_text_3{
+        
         margin-left: -85vw;
         width: 35vw;
         &_2 {
