@@ -165,6 +165,25 @@ html a, body a {
   margin-left: 5px;
 }
 
+.intro {
+  background-image: url(/resources/candyLogo.png);
+  background-size: cover;
+  height: 67.1296vh;
+  width: 69.2708vw;
+  position: relative;
+  left: 15%;
+  margin-top: 15vh;
+  z-index: 15;
+}
+
+.background {
+  background-color: #CBCFC4;
+  opacity: 0.5;
+  width: 100vw;
+  height: 60vh;
+  margin-top: -25vh;
+}
+
 ul.dropItLow {
   visibility: hidden;
 }
