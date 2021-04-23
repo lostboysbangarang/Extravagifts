@@ -1,6 +1,9 @@
 var i=0;
 var images=[];
 var time=10000;
+var base=window.location.pathname;
+console.log(base);
+console.log(window.location.pathname);
 // const fs=require('fs');
 // const dir ="../resources/cats/bear/dogs/bark/";
 // files= new Array();
@@ -12,7 +15,7 @@ for (j=0; j < 15; j++) {
     uj=j+1;
     // ujj=j+2;
     // ujjj=j+3;
-    url="../resources/cats/bear/dogs/bark/"+uj+".png";
+    url="resources/cats/bear/dogs/bark/"+uj+".png";
     // url2="/resources/cats/bear/dogs/bark/"+ujj+".png";
     // url3="/resources/cats/bear/dogs/bark/"+ujjj+".png";
     // url="url("+"'"+uurl+"'"+")"
@@ -51,17 +54,17 @@ function slideToTheLeft(){
     II=i+1
     III=i+2
     if (typeof images[III] != "undefined") {
-        document.getElementsByClassName("photo")[2].style.backgroundImage="url('../"+images[III]+"')";
+        document.getElementsByClassName("photo")[2].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+images[III]+")";
     } else {
-        document.getElementsByClassName("photo")[2].style.backgroundImage="url('../"+images[1]+"')";
+        document.getElementsByClassName("photo")[2].style.backgroundImage="url(../"+images[1]+")";
     }
     if (typeof images[II] != "undefined") {
-        document.getElementsByClassName("photo")[1].style.backgroundImage="url('../"+images[II]+"')";
+        document.getElementsByClassName("photo")[1].style.backgroundImage="url(../"+images[II]+")";
     } else {
-        document.getElementsByClassName("photo")[1].style.backgroundImage="url('../"+images[0]+"')";
+        document.getElementsByClassName("photo")[1].style.backgroundImage="url(../"+images[0]+")";
     }
-    document.getElementsByClassName("photo")[0].style.backgroundImage="url('../"+images[I]+"')";
-    console.log(window.location.origin);
+    document.getElementsByClassName("photo")[0].style.backgroundImage="url(../"+images[I]+")";
+    // console.log(window.location.origin);
 
     if (i <images.length-1) {
         i++;
