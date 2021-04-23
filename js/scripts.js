@@ -35,7 +35,7 @@ for (j=0; j < 15; j++) {
         // console.log (url)
         // console.log (url2)
         // console.log (url3)
-        console.log (images[j])
+    console.log (images[j]);
         // console.log (images[j+1])
         // console.log (images[j+2])
 }
