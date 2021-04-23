@@ -61,6 +61,7 @@ function slideToTheLeft(){
         document.getElementsByClassName("photo")[1].style.backgroundImage="url('../"+images[0]+"')";
     }
     document.getElementsByClassName("photo")[0].style.backgroundImage="url('../"+images[I]+"')";
+    console.log(window.location.origin);
 
     if (i <images.length-1) {
         i++;
