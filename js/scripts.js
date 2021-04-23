@@ -16,7 +16,7 @@ function slideToTheLeft(){
     III=i+2
     if (typeof images[III] != "undefined") {
         document.getElementsByClassName("photo")[2].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+images[III]+")";
-        document.getElementsByClassName("photo")[2].style.boxShadow="5px 5px 5px black, -5px -5px 5px black, -5px 5px 5px black, 5px -5px 5px black";
+        // document.getElementsByClassName("photo")[2].style.boxShadow="2.5px 2.5px 2.5px black inset, -2.5px -2.5px 2.5px black inset, -2.5px 2.5px 2.5px black inset, 2.5px -2.5px 2.5px black inset";
     } else {
         document.getElementsByClassName("photo")[2].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+images[1]+")";
     }
