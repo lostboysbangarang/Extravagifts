@@ -1,7 +1,7 @@
 @keyframes flippero {
   0% {
     opacity: 0;
-    transform: rotateY(-90deg) translateY(-3vw);
+    transform: rotateY(-90deg) translateY(-1vw);
   }
   25% {
     opacity: 1;
