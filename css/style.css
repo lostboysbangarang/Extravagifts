@@ -49,7 +49,7 @@ html a, body a {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.25vw;
+  font-size: clamp(35px,2.25vw,2.25vw);
   width: 25.78125vw;
   border-style: none solid none none;
   border-width: 3px;
@@ -59,9 +59,12 @@ html a, body a {
 .sticky_icky_home_logo {
   height: 60px;
   margin-right: 25px;
+  display: flex;
+  align-items: center;
 }
 .sticky_icky_home_logo img {
-  height: 60px;
+  height: 3vw;
+  min-height: 40px;
   padding: 0px;
 }
 .sticky_icky_home .dropItLow.menu_1 {
@@ -124,12 +127,26 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 35px;
+  font-size: clamp(35px,2.25vw,2.25vw);
   width: 18.75vw;
   height: 60px;
   border-style: none solid none none;
   border-width: 3px;
   border-color: #CBCFC4;
+}
+.sticky_icky_shop .dropItLow.menu_2 {
+  z-index: 100;
+  font-size: 12px;
+  position: absolute;
+  display: inline-block;
+  background-color: #E6DACC;
+  border-style: solid none none none;
+  border-width: 3px;
+  border-color: #CBCFC4;
+  top: 60px;
+  width: 90vw;
+  height: 600px;
+  left: 5vw;
 }
 .sticky_icky_search {
   display: flex;
@@ -271,7 +288,7 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   box-shadow: -5px 5px 10px #99a18c;
 }
 .container_text, .container_text_3 {
-  margin-left: -85vw;
+  margin-left: -93vw;
   width: 35vw;
   height: 37.1478515625vw;
   font-size: 1.5vw;
@@ -286,7 +303,7 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   overflow: hidden;
 }
 .container_text_2, .container_text_3_2 {
-  margin-left: 10vw;
+  margin-left: 11vw;
   width: 35vw;
   height: 37.1478515625vw;
   font-size: 1.5vw;
@@ -309,6 +326,7 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   perspective: 1000px;
 }
 .container_poloroid_1 .photo {
+  transition: all 100ms;
   background-size: cover;
   width: 23.802083333vw;
   height: 23.802083333vw;
@@ -342,6 +360,7 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   perspective: 1000px;
 }
 .container_poloroid_2 .photo {
+  transition: all 100ms;
   background-size: cover;
   width: 23.802083333vw;
   height: 23.802083333vw;
@@ -375,6 +394,7 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   perspective: 1000px;
 }
 .container_poloroid_3 .photo {
+  transition: all 100ms;
   background-size: cover;
   width: 23.802083333vw;
   height: 23.802083333vw;
@@ -432,6 +452,18 @@ li:hover > ul.dropItLow.menu_1 {
   z-index: 100;
 }
 li:hover > ul.dropItLow.menu_1 li {
+  opacity: 0;
+  animation: menu1 900ms ease-in-out forwards;
+}
+
+li:hover > ul.dropItLow.menu_2 {
+  display: block;
+  visibility: visible;
+  opacity: 0;
+  animation: menu1 300ms ease-in-out forwards;
+  z-index: 100;
+}
+li:hover > ul.dropItLow.menu_2 li {
   opacity: 0;
   animation: menu1 900ms ease-in-out forwards;
 }

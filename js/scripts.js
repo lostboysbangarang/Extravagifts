@@ -36,7 +36,7 @@ function hug(you, me){
     }
     console.log(me);
     return me;
-    
+
 }
 function sigh() {
     console.log("K:  "+k);
@@ -75,7 +75,7 @@ function slideImproved() {
 
     }
     // slideToTheLeft(cages);
-    
+
     for (k=0; k<urls.length; k++) {
         idk=cages[k];
         hug(idk,slip);
@@ -136,9 +136,15 @@ function slideImproved() {
 //         }
 //     // }
 var w=0;
+var timeAdj=time-.5;
 function delayShow(xx){
+    // timeAdj=timeAdj-1;
+    console.log("Time:    "+timeAdj);
     console.log("XX:       :"+xx);
-    card[xx].style.animation="flippero 5000ms ease-in-out "+time*1.00000000001+"ms forwards";
+    card[xx].style.transition="all 2000ms";
+    card[xx].style.transformStyle="preserve-3d;";
+    card[xx].style.transformOrigin="30% 100%";
+    card[xx].style.animation="flippero 5000ms ease-in-out "+timeAdj+"ms forwards";
     card[xx].style.animationIterationCount= "infinite";
     w++;
     if (xx<card[xx].length){
@@ -149,7 +155,7 @@ function delayShow(xx){
 
 // }
 async function slideToTheLeft(kennel, i){
-    
+
         console.log("index:   "+index)
         // if (l<kennel.length) {
         //     l=0;
@@ -170,8 +176,8 @@ async function slideToTheLeft(kennel, i){
 
             console.log(kennel.length);
             document.getElementsByClassName("photo")[0].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[I]+")";
-            
-            
+
+
             // void card[0].offsetWidth;
             // card[0].style.transform="scale(2)";
             if (typeof kennel[II] != "undefined") {
@@ -187,8 +193,8 @@ async function slideToTheLeft(kennel, i){
             } else {
                 document.getElementsByClassName("photo")[2].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[1]+")";
             }
-            
-            
+
+
             console.log(window.location.origin+""+window.location.pathname+""+kennel[I]);
             if (i<kennel.length) {
                 i=II;
@@ -205,14 +211,14 @@ async function slideToTheLeft(kennel, i){
                 slideToTheLeft(kennel, i);
             }
             for(x=0;x<card.length;x++){
-                
+
                 delayShow(x);
             }
-            
+
 
         }
-    
-    
+
+
     // }
 
 

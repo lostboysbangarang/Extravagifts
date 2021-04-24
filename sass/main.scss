@@ -38,6 +38,7 @@ $time: 300ms;
     & .photo {
         // background-color: $creme;
         // background-image: url(../resources/cats/bear/dogs/bark/1.png);
+        transition: all 100ms;
         background-size: cover;
         width: 23.802083333vw;
         height: 23.802083333vw;
@@ -152,7 +153,7 @@ html,body {
         &_home {
             // background-color: $primary;
             @include centering();
-            font-size: 2.25vw;
+            font-size: clamp(35px,2.25vw,2.25vw);
             width: 25.78125vw;
             border-style: none solid none none;
             border-width: 3px;
@@ -161,11 +162,15 @@ html,body {
             &_logo {
                 height: 60px;
                 margin-right: 25px;
+                display: flex;
+                align-items: center;
                 & img {
-                    height: 60px;
+                    height: 3vw;
+                    min-height: 40px;
                     padding: 0px;
-                    // margin-top: 10%;
+                    // margin-top: clamp(0px, 0.5211267605633803*1.5vw, 0px);
                     // margin-right: -1vw;
+                    
                 }
             }
             & .dropItLow.menu_1{
@@ -222,16 +227,31 @@ html,body {
                 }
                 
             }
+
         }
         &_shop {
             // background-color: $windmill;
             @include centering();
-            font-size: 35px;
+            font-size: clamp(35px,2.25vw,2.25vw);
             width: 18.75vw;
             height: 60px;
             border-style: none solid none none;
             border-width: 3px;
             border-color: $emmiesRoom;
+            & .dropItLow.menu_2{
+                z-index: 100;
+                font-size: 12px;
+                position: absolute;
+                display: inline-block;
+                background-color: $creme;
+                border-style: solid none none none;
+                border-width: 3px;
+                border-color: $emmiesRoom;
+                top: 60px;
+                width: 90vw;
+                height: 600px;
+                left: 5vw;
+            }
         }
         &_search {
             @include centering();
@@ -378,10 +398,10 @@ html,body {
         
     }
     &_text, &_text_3{
-        margin-left: -85vw;
+        margin-left: -93vw;
         @include meBby();
         &_2 {
-            margin-left: 10vw;
+            margin-left: 11vw;
             @include meBby();
         }
     }
@@ -444,6 +464,18 @@ li:hover > ul.dropItLow {
 }
 
 li:hover > ul.dropItLow.menu_1 {
+    display: block;
+    visibility: visible;
+    opacity: 0;
+    animation: menu1 300ms ease-in-out forwards;
+    z-index: 100;
+    li {
+        opacity: 0;
+        animation: menu1 900ms ease-in-out forwards;
+    }
+
+}
+li:hover > ul.dropItLow.menu_2 {
     display: block;
     visibility: visible;
     opacity: 0;
