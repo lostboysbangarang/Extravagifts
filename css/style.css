@@ -171,7 +171,7 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 15vh;
+  margin-top: 7vw;
   z-index: 15;
   display: flex;
   display: flex;
@@ -179,11 +179,11 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   align-items: center;
 }
 .intro_box {
-  height: 270px;
-  width: 32.2916666667vw;
+  height: 14.5vw;
+  width: 29.5vw;
   margin-left: -2px;
-  margin-top: 55px;
-  line-height: 0.75em;
+  margin-top: 3vw;
+  line-height: 0.5vw;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
