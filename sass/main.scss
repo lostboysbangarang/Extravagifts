@@ -4,7 +4,18 @@ $windmillAlt: #AAB7BC;
 $creme: #E6DACC;
 $emmiesRoom: #CBCFC4;
 $text: #463B57;
+$time: 300ms;
 
+@keyframes flippero{
+    0%{
+        opacity: 0;
+        transform: rotateY(-90deg) translateY(-3vw);        
+    }
+    25%{
+        opacity: 1;
+        transform: rotateY(0deg) translateY(0vw);
+    }
+}
 
 @mixin centering {
     display: flex;
@@ -17,10 +28,10 @@ $text: #463B57;
     height: 1.432432*26.9791666vw;
     margin-top: 7.171514543630vw;
     box-shadow: .4vw .4vw .4vw darken($emmiesRoom, 20%), 0.201920vw 0.201920vw .4vw darken($emmiesRoom, 20%) inset;
-    
+    perspective: 1000px;
     & .photo {
         // background-color: $creme;
-        background-image: url(../resources/cats/bear/dogs/bark/1.png);
+        // background-image: url(../resources/cats/bear/dogs/bark/1.png);
         background-size: cover;
         width: 23.802083333vw;
         height: 23.802083333vw;
@@ -28,7 +39,19 @@ $text: #463B57;
         margin-right: auto;
         margin-top: 1.5885416vw;
         box-shadow: 0.15vw 0.15vw 0.151920vw black inset, -0.15vw -0.15vw 0.151920vw black inset, -0.15vw 0.15vw 0.151920vw black inset, 0.15vw -0.15vw 0.151920vw black inset, 0.151920vw 0.151920vw .3vw black, -0.151920vw -0.151920vw .3vw black, -0.151920vw 0.151920vw .3vw black, 0.151920vw -0.151920vw .3vw black;
+        // & .flip {
+        //     // animation: filppero 300ms ease-in-out forwards;
+        //     background-size: cover;
+        //     width: 23.802083333vw;
+        //     height: 23.802083333vw;
+        //     margin-left: auto;
+        //     margin-right: auto;
+        //     margin-top: 1.5885416vw;
+        //     box-shadow: 0.15vw 0.15vw 0.151920vw black inset, -0.15vw -0.15vw 0.151920vw black inset, -0.15vw 0.15vw 0.151920vw black inset, 0.15vw -0.15vw 0.151920vw black inset, 0.151920vw 0.151920vw .3vw black, -0.151920vw -0.151920vw .3vw black, -0.151920vw 0.151920vw .3vw black, 0.151920vw -0.151920vw .3vw black;
+        // }
+        
     }
+    
     & .text {
         // @media (max-width:1410px){
         //     & h2 {

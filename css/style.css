@@ -1,3 +1,13 @@
+@keyframes flippero {
+  0% {
+    opacity: 0;
+    transform: rotateY(-90deg) translateY(-3vw);
+  }
+  25% {
+    opacity: 1;
+    transform: rotateY(0deg) translateY(0vw);
+  }
+}
 html, body {
   width: 100%;
   height: 100%;
@@ -296,9 +306,9 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   height: 38.6458215712vw;
   margin-top: 7.1715145436vw;
   box-shadow: 0.4vw 0.4vw 0.4vw #99a18c, 0.20192vw 0.20192vw 0.4vw #99a18c inset;
+  perspective: 1000px;
 }
 .container_poloroid_1 .photo {
-  background-image: url(../resources/cats/bear/dogs/bark/1.png);
   background-size: cover;
   width: 23.802083333vw;
   height: 23.802083333vw;
@@ -329,9 +339,9 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   height: 38.6458215712vw;
   margin-top: 7.1715145436vw;
   box-shadow: 0.4vw 0.4vw 0.4vw #99a18c, 0.20192vw 0.20192vw 0.4vw #99a18c inset;
+  perspective: 1000px;
 }
 .container_poloroid_2 .photo {
-  background-image: url(../resources/cats/bear/dogs/bark/1.png);
   background-size: cover;
   width: 23.802083333vw;
   height: 23.802083333vw;
@@ -362,9 +372,9 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   height: 38.6458215712vw;
   margin-top: 7.1715145436vw;
   box-shadow: 0.4vw 0.4vw 0.4vw #99a18c, 0.20192vw 0.20192vw 0.4vw #99a18c inset;
+  perspective: 1000px;
 }
 .container_poloroid_3 .photo {
-  background-image: url(../resources/cats/bear/dogs/bark/1.png);
   background-size: cover;
   width: 23.802083333vw;
   height: 23.802083333vw;

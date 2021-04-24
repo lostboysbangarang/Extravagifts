@@ -8,16 +8,25 @@ var cages=[];
 var sent=[];
 var idk=[];
 var timer;
-var time=3000;
+var time=5000;
 var timeOut=0;
 var base=window.location.pathname;
 var xhr=new XMLHttpRequest();
 console.log(base);
 console.log(window.location.pathname);
+const card=document.getElementsByClassName("photo");
+console.log(card);
+// "use strict";
 
-
-
-
+// $(document.body).addClass("built");
+// var bod=document.getElementsByClassName("built");
+// bod[0].addEventListener("animationend", function(e){
+//     // e.preventDefault;
+//     // card[0].classList.remove("photo");
+//     // void card[0].offsetWidth;
+//     // card[0].classList.add("photo");
+//     card[0].style.animation="flippero 10000ms ease-in-out forwards";
+// }, false);
 
 urls[0]="bear";
 urls[1]="dub"
@@ -126,12 +135,20 @@ function slideImproved() {
 
 //         }
 //     // }
-
-
+var w=0;
+function delayShow(xx){
+    console.log("XX:       :"+xx);
+    card[xx].style.animation="flippero 5000ms ease-in-out "+time*.99+"ms forwards";
+    card[xx].style.animationIterationCount= "infinite";
+    w++;
+    if (xx<card[xx].length){
+        setTimeout(delayShow, time*.33,xx);
+    }
+}
 
 
 // }
-function slideToTheLeft(kennel, i){
+async function slideToTheLeft(kennel, i){
     
         console.log("index:   "+index)
         // if (l<kennel.length) {
@@ -152,6 +169,17 @@ function slideToTheLeft(kennel, i){
             console.log(kennel.length);
 
             console.log(kennel.length);
+            document.getElementsByClassName("photo")[0].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[I]+")";
+            
+            
+            // void card[0].offsetWidth;
+            // card[0].style.transform="scale(2)";
+            if (typeof kennel[II] != "undefined") {
+                document.getElementsByClassName("photo")[1].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[II]+")";
+                console.log(window.location.origin+""+window.location.pathname+""+kennel[II]);
+            } else {
+                document.getElementsByClassName("photo")[1].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[0]+")";
+            }
             if (typeof kennel[III] != "undefined") {
                 document.getElementsByClassName("photo")[2].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[III]+")";
                 console.log(window.location.origin+""+window.location.pathname+""+kennel[III]);
@@ -159,13 +187,8 @@ function slideToTheLeft(kennel, i){
             } else {
                 document.getElementsByClassName("photo")[2].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[1]+")";
             }
-            if (typeof kennel[II] != "undefined") {
-                document.getElementsByClassName("photo")[1].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[II]+")";
-                console.log(window.location.origin+""+window.location.pathname+""+kennel[II]);
-            } else {
-                document.getElementsByClassName("photo")[1].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[0]+")";
-            }
-            document.getElementsByClassName("photo")[0].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[I]+")";
+            
+            
             console.log(window.location.origin+""+window.location.pathname+""+kennel[I]);
             if (i<kennel.length) {
                 i=II;
@@ -175,11 +198,17 @@ function slideToTheLeft(kennel, i){
                 // setTimeout(function() {
                 //     slideToTheLeft(kennel, i);
                 // }, time);
+                // card[0].classList.remove("photo");
+                // card[0].classList.add("photo");
             } else {
                 i=0;
                 slideToTheLeft(kennel, i);
             }
-
+            for(x=0;x<card.length;x++){
+                
+                delayShow(x);
+            }
+            
 
         }
     
