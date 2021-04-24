@@ -138,7 +138,7 @@ function slideImproved() {
 var w=0;
 function delayShow(xx){
     console.log("XX:       :"+xx);
-    card[xx].style.animation="flippero 5000ms ease-in-out "+time*.99+"ms forwards";
+    card[xx].style.animation="flippero 5000ms ease-in-out "+time+"ms forwards";
     card[xx].style.animationIterationCount= "infinite";
     w++;
     if (xx<card[xx].length){
