@@ -15,7 +15,7 @@ html, body {
   overflow-x: hidden;
   margin: 0px;
   padding: 0px;
-  font-family: "Laila", sans-serif;
+  font-family: "Cormorant Garamond", serif;
   color: #463B57;
 }
 html input:focus, html textarea:focus, html select:focus, body input:focus, body textarea:focus, body select:focus {
@@ -418,6 +418,16 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   font-size: 2vw;
   margin-top: -1vw;
   margin-bottom: -10px;
+}
+
+.cat {
+  margin-bottom: -10.25vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cat_center {
+  font-size: 5vw;
 }
 
 #breakThat {

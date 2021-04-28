@@ -117,7 +117,7 @@ html,body {
     overflow-x: hidden;
     margin: 0px;
     padding: 0px;
-    font-family: 'Laila', sans-serif;
+    font-family: 'Cormorant Garamond', serif;
     color: $text;
     input:focus, textarea:focus, select:focus {
         outline: none;
@@ -415,6 +415,23 @@ html,body {
         @include shakeShakeIt(); 
     }
     
+}
+.cat {
+    margin-bottom: -10.25vw;
+    @include centering();
+    // height: auto;
+    // z-index: 200;
+    // padding: none;
+    // background-color: $creme;
+    &_center {
+        // padding: none;
+        // margin: none;
+        font-size: 5vw;
+        // background-color: $emmiesRoom;
+    }
+    // width: auto;
+    // margin-left: auto;
+    // position: absolute;
 }
 
 #breakThat {
