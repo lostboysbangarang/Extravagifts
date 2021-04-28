@@ -10,19 +10,18 @@ var sent=[];
 var idk=[];
 var tryScript=[];
 var timer;
-var time=10000;
+var time=3000;
 var timeOut=0;
 var base=window.location.pathname;
 var xhr=new XMLHttpRequest();
 console.log(base);
 console.log(window.location.pathname);
 const card=document.getElementsByClassName("photo");
-const cardTxt=document.getElementsByClassName("text");
 console.log(card);
 var w=0;
 var timeAdj=time-.7;
 var filez=[];
-var R=0;
+
 urls[0]="bear";
 urls[1]="dub";
 
@@ -38,40 +37,79 @@ function hug(you, me){
 }
 function sigh(daGoods) {
     console.log("K:  "+k);
-    if (dezzies.length < scared.length){
-        $.getJSON(""+window.location.origin+""+window.location.pathname+""+daGoods[R]+"", function(data){
-            reUp(data,R);
-        });
-    } else {
-        timer=setInterval(slideToTheLeft(slip, 0),time);
-    }
-    
+    $.getJSON(""+window.location.origin+""+window.location.pathname+""+daGoods[0]+"", reUp(daGoods, 0));
+    // filez=reUp(daGoods);
+    // timer=setInterval(slideToTheLeft(slip, 0),time);
 }
 var dezzies=[];
 function reUp(daGoods, r){
-    console.log("First R:  "+r)
-    if (R<scared.length){
-        // console.log(daGoods);
-        // console.log("DEZ:  "+dezzies)
-        // console.log("DaGoods:  "+daGoods.length)
-        // console.log(daGoods);
-        // console.log(daGoods.category);
-        // console.log(daGoods.itemName);
-        // console.log(daGoods.itemDesc);
-        // console.log(daGoods.price);
-        // console.log("If R:  "+r)
-        dezzies[r]=[
-            daGoods.category,
-            daGoods.itemName,
-            daGoods.itemDesc,
-            daGoods.price
-        ];
-        R++;
-        // console.log("Change R:  "+r)
-        // console.log("Descriptsionsads:   "+dezzies)
-        sigh(scared);
-    }
+    console.log("DEZ:  "+dezzies)
+    console.log("DaGoods:  "+daGoods.length)
+    // for (r=0;r<daGoods.length; r++){
+        // $.getJSON(""+window.location.origin+""+window.location.pathname+""+daGoods[r]+"", function(daGoods) {
+            console.log(daGoods);
+            console.log(daGoods.category);
+            console.log(daGoods.itemName);
+            console.log(daGoods.itemDesc);
+            console.log(daGoods.price);
+            console.log("R:  "+r)
+            dezzies[r]=[
+                daGoods.category,
+                daGoods.itemName,
+                daGoods.itemDesc,
+                daGoods.price
+            ];
+            console.log("Descriptsionsads:   "+dezzies)
+        // });
+    // }
+    // for (r=0;r<daGoods.length; r++){
+    //     $.getJSON(""+window.location.origin+""+window.location.pathname+""+daGoods[r]+"", function(data) {
+    //         console.log(data);
+    //         console.log(data.category);
+    //         console.log(data.itemName);
+    //         console.log(data.itemDesc);
+    //         console.log(data.price);
+    //         console.log("R:  "+r)
+    //         dezzies[r]=[
+    //             data.category,
+    //             data.itemName,
+    //             data.itemDesc,
+    //             data.price
+    //         ];
+    //         console.log("Descriptsionsads:   "+dezzies)
+    //     });
+    // }
+    
+    console.log()
     return dezzies;
+    // // var fs=require("fs");
+    // // var fs;
+    // // var text=fs.readFileSync(daScript, "utf-8");
+    // // var textbyline=text.split("\n");
+    // // console.log(textbyline);
+    // if (window.XMLHttpRequest){
+    //     f = new XMLHttpRequest();
+    // } else {
+    //     f = new XMLHttpRequest("Microsoft.XMLHTTP");
+    // }
+    // f.onreadystatechange = function () {
+    //     if (f.readyState==4) {
+    //         if (f.status==200 || f.status==0) {
+    //             var docSig=f.responseText;
+    //             txtFiles=docSig.split(/\n|\r/g);
+    //         }
+    //     } 
+    // }
+    
+    // f.open("GET", ""+daGoods+"", true);
+    // console.log("F:    "+f);
+    // console.log("F:    "+txtFiles);
+    // // f.send().catch(function(error){
+    // //     console.log(error);
+    // // });
+    
+    
+    
 }
 function sweet(){
     console.log("k:  "+k);
@@ -86,6 +124,7 @@ function slideImproved() {
             kj=k+1;
             url=""+urls[j]+""+kj+".png";
             txt=""+urls[j]+""+kj+".JSON";
+            // console.log(url);
             xhr.open("HEAD",url,false);
             xhr.send();
             if (xhr.status !== 404){
@@ -113,6 +152,7 @@ function slideImproved() {
         hug(idk,slip);
         console.log("why:   "+why);
         hug(why,scared);
+        // hug(daScript,scared);
         console.log(slip[0]);
         console.log("K:   "+k);
     }
@@ -132,13 +172,8 @@ function delayShow(xx){
     card[xx].style.transition="all 2000ms";
     card[xx].style.transformStyle="preserve-3d;";
     card[xx].style.transformOrigin="30% 100%";
-    card[xx].style.animation="flippero 10000ms ease-in-out "+timeAdj+"ms forwards";
+    card[xx].style.animation="flippero 3000ms ease-in-out "+timeAdj+"ms forwards";
     card[xx].style.animationIterationCount= "infinite";
-    cardTxt[xx].style.transition="all 2000ms";
-    cardTxt[xx].style.transformStyle="preserve-3d;";
-    cardTxt[xx].style.transformOrigin="30% 100%";
-    cardTxt[xx].style.animation="flippero 10000ms ease-in-out "+timeAdj+"ms forwards";
-    cardTxt[xx].style.animationIterationCount= "infinite";
     w++;
     if (xx<card[xx].length){
         setTimeout(delayShow, time*.33,xx);
@@ -163,15 +198,12 @@ async function slideToTheLeft(kennel, i){
 
             console.log(kennel.length);
             document.getElementsByClassName("photo")[0].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[I]+")";
-            document.getElementById("pur").innerHTML="&emsp;&emsp;"+dezzies[I][2]+"";
-            document.getElementById("his").innerHTML=""+dezzies[I][1]+"";
+
 
             if (typeof kennel[II] != "undefined") {
                 document.getElementsByClassName("photo")[1].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[II]+")";
                 console.log(window.location.origin+""+window.location.pathname+""+kennel[II]);
-                document.getElementById("meow").innerHTML=""+dezzies[II][0]+"";
-                document.getElementById("purr").innerHTML="&emsp;&emsp;"+dezzies[II][2]+"";
-                document.getElementById("hiss").innerHTML=""+dezzies[II][1]+"";
+                document.getElementById("meow").innerHTML=""+II+"";
             } else {
                 document.getElementsByClassName("photo")[1].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[0]+")";
                 document.getElementById("meow").innerHTML=""+1+"";
@@ -179,8 +211,6 @@ async function slideToTheLeft(kennel, i){
             if (typeof kennel[III] != "undefined") {
                 document.getElementsByClassName("photo")[2].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[III]+")";
                 console.log(window.location.origin+""+window.location.pathname+""+kennel[III]);
-                document.getElementById("purrr").innerHTML="&emsp;&emsp;"+dezzies[III][2]+"";
-                document.getElementById("hisss").innerHTML=""+dezzies[III][1]+"";
             } else {
                 document.getElementsByClassName("photo")[2].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[1]+")";
             }
