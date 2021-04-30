@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/lostboysbangarang/Extravagifts/issues"
   },
-  "homepage": "https://github.com/lostboysbangarang/Extravagifts#readme"
+  "homepage": "https://github.com/lostboysbangarang/Extravagifts#readme",
+  "dependencies": {
+    "aos": "^3.0.0-beta.6"
+  }
 }

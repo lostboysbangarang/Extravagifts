@@ -1,3 +1,5 @@
+// // // // // // // // // // Slide show// // // // // // // // // // 
+//    Setting variables                                            //
 var slip = [];
 var scared=[];
 var urls=[];
@@ -20,7 +22,7 @@ var R=0;
 
 
 
-
+//              Set urls[] to folder names                          //
 urls[0]="bear";
 urls[1]="dub";
 

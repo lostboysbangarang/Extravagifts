@@ -8,8 +8,16 @@
     transform: rotateY(0deg) translateY(0vw);
   }
 }
+@keyframes holdMe {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 html, body {
-  width: 100%;
+  width: 100vw;
   height: 100%;
   max-width: 100vw;
   overflow-x: hidden;
@@ -224,8 +232,7 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
 }
 
 .background {
-  background-color: #CBCFC4;
-  opacity: 0.5;
+  background-color: rgba(203, 207, 196, 0.5);
   width: 100vw;
   height: 25.990615vw;
   margin-top: -15.311458vw;
@@ -234,7 +241,7 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
 .container {
   width: 100vw;
   height: 40vw;
-  margin-bottom: 30px;
+  margin-bottom: 0.5vw;
   display: flex;
 }
 .container h1 {
@@ -245,8 +252,7 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
 .container_photoOut {
   width: 49.21875vw;
   height: 31.7337890625vw;
-  background-color: #CBCFC4;
-  opacity: 0.5;
+  background-color: rgba(203, 207, 196, 0.5);
   z-index: -5;
   margin-top: 6vw;
   margin-left: 42.5vw;
@@ -254,8 +260,7 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
 .container_photoOut_2 {
   width: 49.21875vw;
   height: 31.7337890625vw;
-  background-color: #CBCFC4;
-  opacity: 0.5;
+  background-color: rgba(203, 207, 196, 0.5);
   z-index: -5;
   margin-top: 6vw;
   margin-left: 7.5vw;
@@ -418,6 +423,16 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   font-size: 2vw;
   margin-top: -1vw;
   margin-bottom: -10px;
+}
+.container .hidden {
+  opacity: 0;
+}
+
+.fade-in {
+  transition: opacity 1000ms ease-in;
+}
+.fade-in.appear {
+  opacity: 1;
 }
 
 .cat {
