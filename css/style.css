@@ -8,7 +8,7 @@
     transform: rotateY(0deg) translateY(0vw);
   }
 }
-@keyframes animeRight {
+@keyframes anime-right {
   from {
     transform: translateX(26.7863vw);
     opacity: 0;
@@ -18,9 +18,29 @@
     opacity: 1;
   }
 }
-@keyframes animeLeft {
+@keyframes anime-left {
   from {
     transform: translateX(-30vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0vw);
+    opacity: 1;
+  }
+}
+@keyframes anime-mid-left {
+  from {
+    transform: translateX(-45vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0vw);
+    opacity: 1;
+  }
+}
+@keyframes anime-mid-right {
+  from {
+    transform: translateX(30vw);
     opacity: 0;
   }
   to {
@@ -97,7 +117,7 @@ html a, body a {
   font-size: 12px;
   position: absolute;
   display: inline-block;
-  background-color: #E6DACC;
+  backdrop-filter: blur(5px);
   border-style: solid none none none;
   border-width: 3px;
   border-color: #CBCFC4;

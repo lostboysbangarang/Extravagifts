@@ -5,42 +5,19 @@ $creme: #E6DACC;
 $emmiesRoom: #CBCFC4;
 $text: #463B57;
 $time: 300ms;
+// $move: false;
 
-@keyframes flippero{
-    0%{
-        opacity: 0;
-        transform: rotateY(-90deg) translateY(-1vw);        
-    }
-    25%{
-        opacity: 1;
-        transform: rotateY(0deg) translateY(0vw);
-    }
-    // 99%{
-    //     opacity: 0;
-    // }
-    // 100% {
-    //     opacity: 0;
-    // }
-}
-@keyframes animeRight {
+
+@mixin animeMix($shuffle) {
     from {
-        transform: translateX(26.7863vw);
+        transform: translateX($shuffle);
         opacity: 0;
     }
     to {
         transform: translateX(0vw);
         opacity: 1;
     }
-}
-@keyframes animeLeft {
-    from {
-        transform: translateX(-30vw);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0vw);
-        opacity: 1;
-    }
+    
 }
 
 
@@ -129,6 +106,41 @@ $time: 300ms;
 
 
 
+@keyframes flippero{
+    0%{
+        opacity: 0;
+        transform: rotateY(-90deg) translateY(-1vw);        
+    }
+    25%{
+        opacity: 1;
+        transform: rotateY(0deg) translateY(0vw);
+    }
+    // 99%{
+    //     opacity: 0;
+    // }
+    // 100% {
+    //     opacity: 0;
+    // }
+}
+@keyframes anime-right {
+    @include animeMix(26.7863vw);
+}
+@keyframes anime-left {
+    @include animeMix(-30vw);
+}
+@keyframes anime-mid-left {
+    @include animeMix(-45vw);
+}
+@keyframes anime-mid-right {
+    @include animeMix(30vw);
+}
+
+
+
+
+
+
+
 
 
 
@@ -163,6 +175,7 @@ html,body {
     z-index: 100;
     background-color: white;
     // @include centering();
+    // background-
     & ul{
         list-style: none;
         margin: 0px;
@@ -206,7 +219,8 @@ html,body {
                 font-size: 12px;
                 position: absolute;
                 display: inline-block;
-                background-color: $creme;
+                // background-color: $creme;
+                backdrop-filter: blur(5px);
                 border-style: solid none none none;
                 border-width: 3px;
                 border-color: $emmiesRoom;
