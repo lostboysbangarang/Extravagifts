@@ -8,6 +8,26 @@
     transform: rotateY(0deg) translateY(0vw);
   }
 }
+@keyframes animeRight {
+  from {
+    transform: translateX(26.7863vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0vw);
+    opacity: 1;
+  }
+}
+@keyframes animeLeft {
+  from {
+    transform: translateX(-35vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0vw);
+    opacity: 1;
+  }
+}
 html, body {
   width: 100%;
   height: 100%;
@@ -236,6 +256,7 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   height: 40vw;
   margin-bottom: 30px;
   display: flex;
+  animation: "anime 3500ms forwards ease-in-out";
 }
 .container h1 {
   display: flex;
@@ -290,7 +311,7 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
 .container_text, .container_text_3 {
   margin-left: -93vw;
   width: 35vw;
-  height: 37.1478515625vw;
+  height: 40vw;
   font-size: 1.5vw;
   margin-top: 1vw;
 }
@@ -305,7 +326,7 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
 .container_text_2, .container_text_3_2 {
   margin-left: 11vw;
   width: 35vw;
-  height: 37.1478515625vw;
+  height: 40vw;
   font-size: 1.5vw;
   margin-top: 1vw;
 }

@@ -34,8 +34,9 @@ urls[1]="dub";
 
 
 function slideImproved() {
+    FFS();
     for (j=0; j<urls.length; j++) {
-        urls[j]="resources/cats/"+urls[j]+"/dogs/bark/";
+        urls[j]="/resources/cats/"+urls[j]+"/dogs/bark/";
         for (k=0; k<1000; k++) {
             kj=k+1;
             url=""+urls[j]+""+kj+".png";
@@ -187,3 +188,56 @@ function prepareAnimation(element) {
 
 
 window.onload = slideImproved();
+
+function FFS() {
+    const itatchi= document.querySelectorAll(".anime");
+    // observer= new IntersectionObserver((entries) => {
+    //     console.log(entries);
+    //     if()
+    // })
+    // observer.observe(images)
+    const niisan= {
+        threshold: .5
+    }
+    const hide= {
+        threshold: .1
+    }
+    const sauske= new IntersectionObserver(function(entries, sauske){
+        // console.log(entries);
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                // console.log("Entry OUB:     "+entry);
+                // if(entry.target.style.)
+                // entry.target.style.animation= "none";
+                // entry.target.style.opacity= "0";
+                return;
+            } else {
+                // console.log("Entry INB:     "+entry);
+                
+                entry.target.style.animation= entry.target.dataset.anime+" 3500ms forwards ease-in-out";
+                console.log(entry);
+            }
+        })
+    }, niisan);
+    const senpai= new IntersectionObserver(function(entries, sauske){
+        // console.log(entries);
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                console.log("Entry OUB:     "+entry);
+                // if(entry.target.style.)
+                entry.target.style.animation= "none";
+                entry.target.style.opacity= "0";
+                return;
+            } else {
+                // console.log("Entry INB:     "+entry);
+                
+                // entry.target.style.animation= "anime 3500ms forwards ease-in-out";
+                // console.log(entry);
+            }
+        })
+    }, hide);
+    itatchi.forEach(death=> {
+        sauske.observe(death);
+        senpai.observe(death);
+    });
+}

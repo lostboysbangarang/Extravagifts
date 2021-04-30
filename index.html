@@ -7,7 +7,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-yJpxAFV0Ip/w63YkZfDWDTU6re/Oc3ZiVqMa97pi8uPt92y0wzeK3UFM2yQRhEom" crossorigin="anonymous">
-        
+        <!-- <script src="js/catAnimations.js" type="text/javascript"></script> -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -90,11 +90,11 @@
     <div class="background">
     </div>
     <div class="container">
-        <div class="container_photoOut">
+        <div class="container_photoOut anime" data-anime="animeRight">
         </div>
-        <div class="container_photoIn">
+        <div class="container_photoIn anime" data-anime="animeRight">
         </div>
-        <div class="container_text">
+        <div class="container_text anime" data-anime="animeLeft">
             <h1>Collection I</h1>
             <p>
                 &emsp;&emsp;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
@@ -126,11 +126,11 @@
         </div>
     </div>
     <div class="container">
-        <div class="container_photoOut">
+        <div class="container_photoOut anime" data-anime="animeRight">
         </div>
-        <div class="container_photoIn_3">
+        <div class="container_photoIn_3 anime" data-anime="animeRight">
         </div>
-        <div class="container_text_3">
+        <div class="container_text_3 anime" data-anime="animeLeft">
             <h1>Collection III</h1>
             <p>
                 &emsp;&emsp;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
@@ -176,6 +176,13 @@
         </div>
     </div>
     <script src="js/scripts.js" type="text/javascript"></script>
+    <!-- <script>
+        const images= document.querySelector(".anime");
+        observer= new IntersectionObserver((entries) => {
+            console.log(entries);
+        })
+        observer.observe(images)
+    </script> -->
 </body>
 
 </html>

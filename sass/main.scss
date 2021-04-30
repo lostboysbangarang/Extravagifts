@@ -22,6 +22,27 @@ $time: 300ms;
     //     opacity: 0;
     // }
 }
+@keyframes animeRight {
+    from {
+        transform: translateX(26.7863vw);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0vw);
+        opacity: 1;
+    }
+}
+@keyframes animeLeft {
+    from {
+        transform: translateX(-35vw);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0vw);
+        opacity: 1;
+    }
+}
+
 
 @mixin centering {
     display: flex;
@@ -85,7 +106,8 @@ $time: 300ms;
 }
 @mixin meBby {
     width: 35vw;
-    height: .754750*49.21875vw;
+    // height: .754750*49.21875vw;
+    height: 40vw;
     font-size: 1.5vw;
     margin-top: 1vw;
     & h1 {
@@ -348,6 +370,7 @@ html,body {
     height: .4*100vw;
     margin-bottom: 30px;
     display: flex;
+    animation: "anime 3500ms forwards ease-in-out";
     & h1 {
         @include centering();
     }
