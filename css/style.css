@@ -20,7 +20,7 @@
 }
 @keyframes animeLeft {
   from {
-    transform: translateX(-35vw);
+    transform: translateX(-30vw);
     opacity: 0;
   }
   to {
@@ -77,7 +77,7 @@ html a, body a {
   height: 60px;
 }
 .sticky_icky_home_logo {
-  height: 60px;
+  height: 2vw;
   margin-right: 25px;
   display: flex;
   align-items: center;
@@ -86,6 +86,11 @@ html a, body a {
   height: 3vw;
   min-height: 40px;
   padding: 0px;
+}
+@media screen and (min-width: 1920px) {
+  .sticky_icky_home_logo img {
+    height: 59px;
+  }
 }
 .sticky_icky_home .dropItLow.menu_1 {
   z-index: 100;
@@ -313,7 +318,6 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   width: 35vw;
   height: 40vw;
   font-size: 1.5vw;
-  margin-top: 1vw;
 }
 .container_text h1, .container_text_3 h1 {
   font-size: 4vw;
@@ -328,7 +332,6 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   width: 35vw;
   height: 40vw;
   font-size: 1.5vw;
-  margin-top: 1vw;
 }
 .container_text_2 h1, .container_text_3_2 h1 {
   font-size: 4vw;

@@ -34,7 +34,7 @@ $time: 300ms;
 }
 @keyframes animeLeft {
     from {
-        transform: translateX(-35vw);
+        transform: translateX(-30vw);
         opacity: 0;
     }
     to {
@@ -109,7 +109,7 @@ $time: 300ms;
     // height: .754750*49.21875vw;
     height: 40vw;
     font-size: 1.5vw;
-    margin-top: 1vw;
+    // margin-top: 1vw;
     & h1 {
         font-size: 4vw;
     }
@@ -182,16 +182,22 @@ html,body {
             border-color: $emmiesRoom;
             height: 60px;
             &_logo {
-                height: 60px;
+                height: 2vw;
                 margin-right: 25px;
                 display: flex;
                 align-items: center;
                 & img {
                     height: 3vw;
+                    // height: clamp(40px, 3vw, 59px);
                     min-height: 40px;
                     padding: 0px;
+                    // max-height: 20px;
                     // margin-top: clamp(0px, 0.5211267605633803*1.5vw, 0px);
                     // margin-right: -1vw;
+                    @media screen and (min-width: 1920px) {
+                        height: 59px;
+                    }
+                    
                     
                 }
             }
