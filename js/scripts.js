@@ -36,7 +36,7 @@ urls[1]="dub";
 function slideImproved() {
     // FFS();
     for (j=0; j<urls.length; j++) {
-        urls[j]="/resources/cats/"+urls[j]+"/dogs/bark/";
+        urls[j]=window.location.pathname+"resources/cats/"+urls[j]+"/dogs/bark/";
         for (k=0; k<1000; k++) {
             kj=k+1;
             url=""+urls[j]+""+kj+".png";
@@ -55,7 +55,7 @@ function slideImproved() {
             }
         }
     }
-    for (k=0; k<urls.length; k++) {
+    for (k=0; k<seriously.length; k++) {
         idk=cages[k];
         why=tryScript[k];
         hug(idk,slip);
