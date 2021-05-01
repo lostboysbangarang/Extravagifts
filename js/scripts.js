@@ -55,7 +55,7 @@ function slideImproved() {
             }
         }
     }
-    for (k=0; k<seriously.length; k++) {
+    for (k=0; k<urls.length; k++) {
         idk=cages[k];
         why=tryScript[k];
         hug(idk,slip);

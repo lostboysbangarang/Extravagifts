@@ -1,226 +1,243 @@
 var slip = [];
 var scared=[];
-var index=0;
-var images=[];
 var urls=[];
 var critters=[];
 var daScript=[];
 var cages=[];
-var sent=[];
 var idk=[];
+var tryScript=[];
 var timer;
-var time=50000;
-var timeOut=0;
-var base=window.location.pathname;
+var time= 5000;
+var $time=5;
+var $timeFade=$time*.25;
+var $timeStay=$time*.75;
+var timeAdj=time-1;
 var xhr=new XMLHttpRequest();
-console.log(base);
-console.log(window.location.pathname);
 const card=document.getElementsByClassName("photo");
-console.log(card);
-var w=0;
-var timeAdj=time-.7;
-var filez=[];
+const cardTxt=document.getElementsByClassName("text");
+var R=0;
+
+
+
+
 
 urls[0]="bear";
 urls[1]="dub";
 
 
 
-function hug(you, me){
-    for(let y=0, len=you.length; y< len; y++){
-        me.push(you[y]);
-    }
-    console.log(me);
-    return me;
 
-}
-function sigh(daGoods) {
-    console.log("K:  "+k);
-    // filez=reUp(daGoods);
-    timer=setInterval(slideToTheLeft(slip, daGoods, 0),time);
-}
-var dezzies=[];
-// function reUp(daGoods){
-//     console.log("DEZ:  "+dezzies)
-//     console.log("DaGoods length:"+daGoods.length);
-//     for (r=0;r<daGoods.length; r++){
-//         $.getJSON(""+window.location.origin+""+window.location.pathname+""+daGoods[r]+"", function(data) {
-//             console.log(data);
-//             console.log(data.category);
-//             console.log(data.itemName);
-//             console.log(data.itemDesc);
-//             console.log(data.price);
-//             console.log("R:  "+r)
-//             dezzies[r]=[
-//                 data.category,
-//                 data.itemName,
-//                 data.itemDesc,
-//                 data.price
-//             ];
-//             console.log("Descriptsionsads:   "+dezzies)
-//         });
-//     }
-    
-//     console.log()
-//     return dezzies;
-//     // // var fs=require("fs");
-//     // // var fs;
-//     // // var text=fs.readFileSync(daScript, "utf-8");
-//     // // var textbyline=text.split("\n");
-//     // // console.log(textbyline);
-//     // if (window.XMLHttpRequest){
-//     //     f = new XMLHttpRequest();
-//     // } else {
-//     //     f = new XMLHttpRequest("Microsoft.XMLHTTP");
-//     // }
-//     // f.onreadystatechange = function () {
-//     //     if (f.readyState==4) {
-//     //         if (f.status==200 || f.status==0) {
-//     //             var docSig=f.responseText;
-//     //             txtFiles=docSig.split(/\n|\r/g);
-//     //         }
-//     //     } 
-//     // }
-    
-//     // f.open("GET", ""+daGoods+"", true);
-//     // console.log("F:    "+f);
-//     // console.log("F:    "+txtFiles);
-//     // // f.send().catch(function(error){
-//     // //     console.log(error);
-//     // // });
-    
-    
-    
-// }
-function sweet(){
-    console.log("k:  "+k);
-    if (timeOut<cages[k].length) {
-        slideToTheLeft(slip);
-    }
-}
+
+
+
+
+
+
 function slideImproved() {
+    // FFS();
     for (j=0; j<urls.length; j++) {
-        urls[j]="resources/cats/"+urls[j]+"/dogs/bark/";
+        urls[j]=window.location.pathname+"resources/cats/"+urls[j]+"/dogs/bark/";
         for (k=0; k<1000; k++) {
             kj=k+1;
             url=""+urls[j]+""+kj+".png";
             txt=""+urls[j]+""+kj+".JSON";
-            console.log(url);
             xhr.open("HEAD",url,false);
             xhr.send();
             if (xhr.status !== 404){
-
                 daScript[k]=txt;
                 critters[k]=url;
-                console.log(critters[k]);
             } else {
                 k=1001;
-                console.log("Nice try kid");
                 cages[j]=critters;
                 critters=[];
+                tryScript[j]=daScript;
+                daScript=[];
             }
         }
-
     }
-
-    for (k=0; k<urls.length; k++) {
+    for (k=0; k<seriously.length; k++) {
         idk=cages[k];
-        why=daScript;
+        why=tryScript[k];
         hug(idk,slip);
         hug(why,scared);
-        // hug(daScript,scared);
-        console.log(slip[0]);
-        console.log("K:   "+k);
     }
-    console.log("Scared:  "+scared);
-    sigh(daScript);
+    sigh(scared);
 }
+function hug(you, me){
+    for(let y=0, len=you.length; y< len; y++){
+        me.push(you[y]);
+    }
+    return me;
 
-
-
-
-
-
-
-function delayShow(xx){
-    console.log("Time:    "+timeAdj);
-    console.log("XX:       :"+xx);
-    card[xx].style.transition="all 2000ms";
-    card[xx].style.transformStyle="preserve-3d;";
-    card[xx].style.transformOrigin="30% 100%";
-    card[xx].style.animation="flippero 50000ms ease-in-out "+timeAdj+"ms forwards";
-    card[xx].style.animationIterationCount= "infinite";
-    w++;
-    if (xx<card[xx].length){
-        setTimeout(delayShow, time*.33,xx);
+}
+function sigh(daGoods) {
+    if (dezzies.length < scared.length){
+        $.getJSON(""+window.location.origin+""+window.location.pathname+""+daGoods[R]+"", function(data){
+            reUp(data,R);
+        });
+    } else {
+        timer=setInterval(slideToTheLeft(slip, 0),time);
     }
 }
-
-
-function slideToTheLeft(kennel, daGoods, i){
-    console.log("I:   "+i);
-    console.log("path:   "+window.location.origin+""+window.location.pathname+""+daGoods[i]+"");
-    $.getJSON(""+window.location.origin+""+window.location.pathname+""+daGoods[i]+"", function(data) {
-        console.log("index:   "+index)
-        console.log(kennel.length);
-        if (i==kennel.length){
+var dezzies=[];
+function reUp(daGoods, r){
+    if (R<scared.length){
+        dezzies[r]=[
+            daGoods.category,
+            daGoods.itemName,
+            daGoods.itemDesc,
+            daGoods.price
+        ];
+        R++;
+        sigh(scared);
+    }
+    return dezzies;
+}
+async function slideToTheLeft(kennel, i){
+    if (i==kennel.length){
+        i=0;
+    }
+    I=i;
+    II=i+1;
+    III=i+2;
+    if (typeof kennel[I] != "undefined") {
+        document.getElementsByClassName("photo")[0].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[I]+")";
+        document.getElementById("pur").innerHTML="&emsp;&emsp;"+dezzies[I][2]+"";
+        document.getElementById("his").innerHTML=""+dezzies[I][1]+"";
+        if (I==0) {
+            card[0].style.transformStyle="preserve-3d;";
+            card[0].style.transformOrigin="30% 100%";
+            card[0].style.animation="flippero "+time+"ms ease-in-out "+timeAdj+"ms forwards";
+        }
+        
+        
+        if (typeof kennel[II] != "undefined") {
+            document.getElementsByClassName("photo")[1].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[II]+")";
+            document.getElementById("meow").innerHTML=""+dezzies[II][0]+"";
+            document.getElementById("purr").innerHTML="&emsp;&emsp;"+dezzies[II][2]+"";
+            document.getElementById("hiss").innerHTML=""+dezzies[II][1]+"";
+            if (I==0) {
+                card[II].style.transformStyle="preserve-3d;";
+                card[II].style.transformOrigin="30% 100%";
+                card[II].style.animation="flippero "+time+"ms ease-in-out "+timeAdj+"ms forwards";
+            }
+        } else {
+            document.getElementsByClassName("photo")[1].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[0]+")";
+            document.getElementById("meow").innerHTML=""+dezzies[1][0]+"";
+        }
+        if (typeof kennel[III] != "undefined") {
+            document.getElementsByClassName("photo")[2].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[III]+")";
+            document.getElementById("purrr").innerHTML="&emsp;&emsp;"+dezzies[III][2]+"";
+            document.getElementById("hisss").innerHTML=""+dezzies[III][1]+"";
+            if (I==0) {
+                card[III].style.transformStyle="preserve-3d;";
+                card[III].style.transformOrigin="30% 100%";
+                card[III].style.animation="flippero "+time+"ms ease-in-out "+timeAdj+"ms forwards";
+            }
+        } else {
+            document.getElementsByClassName("photo")[2].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[1]+")";
+        }
+        if (i<kennel.length) {
+            i=II;
+            setTimeout(slideToTheLeft, time, kennel, i);
+        } else {
             i=0;
+            slideToTheLeft(kennel, i);
         }
-        console.log("I:   "+i);
+        for(x=0;x<card.length;x++){
 
-        I=i;
-        II=i+1;
-        III=i+2;
-        if (typeof kennel[I] != "undefined") {
-            console.log(kennel.length);
-
-            console.log(kennel.length);
-            document.getElementsByClassName("photo")[0].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[I]+")";
-            document.getElementById("pur").innerHTML="&emsp;&emsp;"+data.itemDesc+"";
-            document.getElementById("his").innerHTML=""+data.itemName+"";
-
-            if (typeof kennel[II] != "undefined") {
-                document.getElementsByClassName("photo")[1].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[II]+")";
-                console.log(window.location.origin+""+window.location.pathname+""+kennel[II]);
-                document.getElementById("meow").innerHTML=""+data.category+"";
-                document.getElementById("purr").innerHTML="&emsp;&emsp;"+data.itemDesc+"";
-                document.getElementById("hiss").innerHTML=""+data.itemName+"";
-            } else {
-                document.getElementsByClassName("photo")[1].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[0]+")";
-                document.getElementById("meow").innerHTML=""+1+"";
-                
-            }
-            if (typeof kennel[III] != "undefined") {
-                document.getElementsByClassName("photo")[2].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[III]+")";
-                console.log(window.location.origin+""+window.location.pathname+""+kennel[III]);
-                document.getElementById("purrr").innerHTML="&emsp;&emsp;"+data.itemDesc+"";
-                document.getElementById("hisss").innerHTML=""+data.itemName+"";
-            } else {
-                document.getElementsByClassName("photo")[2].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[1]+")";
-            }
-
-
-            console.log(window.location.origin+""+window.location.pathname+""+kennel[I]);
-            if (i<kennel.length) {
-                i=II;
-                setTimeout(slideToTheLeft, time, kennel, daGoods, i);
-            } else {
-                i=0;
-                slideToTheLeft(kennel, i);
-            }
-            for(x=0;x<card.length;x++){
-
-                delayShow(x);
-            }
-
-
+            delayShow(x);
         }
-    });
+    }
+}
+function delayShow(xx){
+    Promise.resolve(card[xx])
+        .then(prepareAnimation)
+        .then(playAnimations);
+    Promise.resolve(cardTxt[xx])
+        .then(prepareAnimation)
+        .then(playAnimations);
+}
 
 
 
 
 
+var animations = {
+    flippy: (element, done) => {
+        TweenMax.set(element, {autoAlpha:0, rotationY: "-90deg", translateY: "0vw"});
+        TweenMax
+            .to(element, $timeFade, {autoAlpha: 1, rotationY: "0deg", translateY: "0vw", onComplete: done});
+    }
+}
 
-} 
+
+function animate(element, animation) {
+    return new Promise(resolve => animation(element, resolve));
+}
+
+async function playAnimations(element) {
+    await animate(element, animations.flippy);
+}
+
+
+function prepareAnimation(element) {
+    TweenLite.set(element, { clearProps: "scale" });
+    return element;
+}
+
+
 window.onload = slideImproved();
+
+function FFS() {
+    const itatchi= document.querySelectorAll(".anime");
+    // observer= new IntersectionObserver((entries) => {
+    //     console.log(entries);
+    //     if()
+    // })
+    // observer.observe(images)
+    const niisan= {
+        threshold: .5
+    }
+    const hide= {
+        threshold: .1
+    }
+    const sauske= new IntersectionObserver(function(entries, sauske){
+        // console.log(entries);
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                // console.log("Entry OUB:     "+entry);
+                // if(entry.target.style.)
+                // entry.target.style.animation= "none";
+                // entry.target.style.opacity= "0";
+                return;
+            } else {
+                // console.log("Entry INB:     "+entry);
+                
+                entry.target.style.animation= entry.target.dataset.anime+" 3500ms forwards ease-in-out";
+                console.log(entry);
+            }
+        })
+    }, niisan);
+    const senpai= new IntersectionObserver(function(entries, sauske){
+        // console.log(entries);
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                console.log("Entry OUB:     "+entry);
+                // if(entry.target.style.)
+                entry.target.style.animation= "none";
+                entry.target.style.opacity= "0";
+                return;
+            } else {
+                // console.log("Entry INB:     "+entry);
+                
+                // entry.target.style.animation= "anime 3500ms forwards ease-in-out";
+                // console.log(entry);
+            }
+        })
+    }, hide);
+    itatchi.forEach(death=> {
+        sauske.observe(death);
+        senpai.observe(death);
+    });
+}
