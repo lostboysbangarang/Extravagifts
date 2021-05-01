@@ -72,7 +72,7 @@ function hug(you, me){
 }
 function sigh(daGoods) {
     if (dezzies.length < scared.length){
-        $.getJSON(""+window.location.origin+""+window.location.pathname+""+daGoods[R]+"", function(data){
+        $.getJSON(""+window.location.origin+""+daGoods[R]+"", function(data){
             reUp(data,R);
         });
     } else {
