@@ -34,7 +34,7 @@ urls[1]="dub";
 
 
 function slideImproved() {
-    // FFS();
+    FFS();
     for (j=0; j<urls.length; j++) {
         urls[j]=window.location.pathname+"resources/cats/"+urls[j]+"/dogs/bark/";
         for (k=0; k<1000; k++) {
