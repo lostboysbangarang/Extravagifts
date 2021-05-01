@@ -48,6 +48,16 @@
     opacity: 1;
   }
 }
+@keyframes pop-up {
+  from {
+    opacity: 0;
+    transform: translateY(40vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0vh);
+  }
+}
 html, body {
   width: 100%;
   height: 100%;
@@ -117,7 +127,9 @@ html a, body a {
   font-size: 12px;
   position: absolute;
   display: inline-block;
+  background-color: rgba(203, 207, 196, 0.3);
   backdrop-filter: blur(5px);
+  border-radius: 0px 0px 50px 50px;
   border-style: solid none none none;
   border-width: 3px;
   border-color: #CBCFC4;
@@ -131,14 +143,14 @@ html a, body a {
   right: 50%;
   width: 45%;
   height: 140px;
-  top: 8%;
+  top: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   border-style: none solid none none;
 }
-border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
+.sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   font-size: 3em;
 }
 .sticky_icky_home .dropItLow.menu_1 .section1_email {
@@ -149,24 +161,25 @@ border- .sticky_icky_home .dropItLow.menu_1 .section1_phoneNum {
   width: 45%;
   left: 50%;
   height: 140px;
-  top: 8%;
+  top: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 .sticky_icky_home .dropItLow.menu_1 .section2_hours {
-  font-size: 1.75em;
+  font-size: 3em;
 }
 .sticky_icky_home .dropItLow.menu_1 .section2_address {
-  margin-left: 15px;
+  margin-left: 1.5vw;
+  font-size: 1.75em;
 }
 .sticky_icky_home .dropItLow.menu_1 .section3 {
   position: absolute;
   width: 95%;
   height: 500px;
   margin-left: 2.5%;
-  top: 200px;
+  top: 10px;
 }
 .sticky_icky_shop {
   display: flex;

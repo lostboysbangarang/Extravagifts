@@ -3,6 +3,7 @@ $windmill: #AAB7BC;
 $windmillAlt: #AAB7BC;
 $creme: #E6DACC;
 $emmiesRoom: #CBCFC4;
+$emmiesRoomA: rgba(203, 207, 196, .3);
 $text: #463B57;
 $time: 300ms;
 // $move: false;
@@ -135,7 +136,16 @@ $time: 300ms;
     @include animeMix(30vw);
 }
 
-
+@keyframes pop-up {
+    from {
+        opacity: 0;
+        transform: translateY(40vh);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0vh);
+    }
+}
 
 
 
@@ -219,8 +229,9 @@ html,body {
                 font-size: 12px;
                 position: absolute;
                 display: inline-block;
-                // background-color: $creme;
+                background-color: $emmiesRoomA;
                 backdrop-filter: blur(5px);
+                border-radius: 0px 0px 50px 50px;
                 border-style: solid none none none;
                 border-width: 3px;
                 border-color: $emmiesRoom;
@@ -233,11 +244,11 @@ html,body {
                     right: 50%;
                     width: 45%;
                     height: 140px;
-                    top: 8%;
+                    top: 70%;
                     @include centering();
                     flex-direction: column;
                     border-style: none solid none none;
-                    border-
+                    
                     &_phoneNum {
                         font-size: 3em;
                     }
@@ -250,14 +261,15 @@ html,body {
                     width: 45%;
                     left: 50%;
                     height: 140px;
-                    top: 8%;
+                    top: 70%;
                     @include centering();
                     flex-direction: column;
                     &_hours {
-                        font-size: 1.75em;
+                        font-size: 3em;
                     }
                     &_address {
-                        margin-left: 15px;
+                        margin-left: 1.5vw;
+                        font-size: 1.75em;
                     }
                 }
                 & .section3 {
@@ -265,7 +277,7 @@ html,body {
                     width: 95%;
                     height: 500px;
                     margin-left: 2.5%;
-                    top: 200px;
+                    top: 10px;
                 }
                 
             }
@@ -273,7 +285,9 @@ html,body {
         }
         &_shop {
             // background-color: $windmill;
+            
             @include centering();
+            // display: none;
             font-size: clamp(35px,2.25vw,2.25vw);
             width: 18.75vw;
             height: 60px;

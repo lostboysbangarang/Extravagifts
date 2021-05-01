@@ -136,6 +136,7 @@ async function slideToTheLeft(kennel, i){
             }
         } else {
             document.getElementsByClassName("photo")[2].style.backgroundImage="url("+window.location.origin+""+kennel[1]+")";
+            document.getElementById("meow").innerHTML=""+dezzies[2][0]+"";
         }
         if (i<kennel.length) {
             i=II;
@@ -214,7 +215,7 @@ function FFS() {
             } else {
                 // console.log("Entry INB:     "+entry);
                 
-                entry.target.style.animation= entry.target.dataset.anime+" 3500ms forwards ease-in-out";
+                entry.target.style.animation= entry.target.dataset.anime+" "+entry.target.dataset.time+"ms forwards ease";
                 console.log(entry);
             }
         })
@@ -223,7 +224,7 @@ function FFS() {
         // console.log(entries);
         entries.forEach(entry => {
             if (!entry.isIntersecting) {
-                console.log("Entry OUB:     "+entry);
+                // console.log("Entry OUB:     "+entry);
                 // if(entry.target.style.)
                 entry.target.style.animation= "none";
                 entry.target.style.opacity= "0";
