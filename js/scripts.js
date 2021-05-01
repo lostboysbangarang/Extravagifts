@@ -101,7 +101,7 @@ async function slideToTheLeft(kennel, i){
     II=i+1;
     III=i+2;
     if (typeof kennel[I] != "undefined") {
-        document.getElementsByClassName("photo")[0].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[I]+")";
+        document.getElementsByClassName("photo")[0].style.backgroundImage="url("+window.location.origin+""+kennel[I]+")";
         document.getElementById("pur").innerHTML="&emsp;&emsp;"+dezzies[I][2]+"";
         document.getElementById("his").innerHTML=""+dezzies[I][1]+"";
         if (I==0) {
@@ -112,7 +112,7 @@ async function slideToTheLeft(kennel, i){
         
         
         if (typeof kennel[II] != "undefined") {
-            document.getElementsByClassName("photo")[1].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[II]+")";
+            document.getElementsByClassName("photo")[1].style.backgroundImage="url("+window.location.origin+""+kennel[II]+")";
             document.getElementById("meow").innerHTML=""+dezzies[II][0]+"";
             document.getElementById("purr").innerHTML="&emsp;&emsp;"+dezzies[II][2]+"";
             document.getElementById("hiss").innerHTML=""+dezzies[II][1]+"";
@@ -122,11 +122,11 @@ async function slideToTheLeft(kennel, i){
                 card[II].style.animation="flippero "+time+"ms ease-in-out "+timeAdj+"ms forwards";
             }
         } else {
-            document.getElementsByClassName("photo")[1].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[0]+")";
+            document.getElementsByClassName("photo")[1].style.backgroundImage="url("+window.location.origin+""+kennel[0]+")";
             document.getElementById("meow").innerHTML=""+dezzies[1][0]+"";
         }
         if (typeof kennel[III] != "undefined") {
-            document.getElementsByClassName("photo")[2].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[III]+")";
+            document.getElementsByClassName("photo")[2].style.backgroundImage="url("+window.location.origin+""+kennel[III]+")";
             document.getElementById("purrr").innerHTML="&emsp;&emsp;"+dezzies[III][2]+"";
             document.getElementById("hisss").innerHTML=""+dezzies[III][1]+"";
             if (I==0) {
@@ -135,7 +135,7 @@ async function slideToTheLeft(kennel, i){
                 card[III].style.animation="flippero "+time+"ms ease-in-out "+timeAdj+"ms forwards";
             }
         } else {
-            document.getElementsByClassName("photo")[2].style.backgroundImage="url("+window.location.origin+""+window.location.pathname+""+kennel[1]+")";
+            document.getElementsByClassName("photo")[2].style.backgroundImage="url("+window.location.origin+""+kennel[1]+")";
         }
         if (i<kennel.length) {
             i=II;
